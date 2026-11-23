@@ -1,0 +1,41 @@
+# Android / Gradle
+.gradle/
+**/build/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Signing and secrets
+*.jks
+*.keystore
+signing.properties
+keystore.properties
+*.p12
+*.pem
+.env
+.env.*
+
+# Release binaries
+*.apk
+*.aab
+*.apks
+*.idsig
+
+# IDE / OS
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# Sensitive/private fixtures
+**/fixtures/private/
+**/fixtures/real/
+**/*real-invoice*
+**/*真实票据*
