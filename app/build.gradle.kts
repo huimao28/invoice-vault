@@ -11,7 +11,7 @@ val releaseSigning = Properties().apply { signingPropertiesFile?.inputStream()?.
 
 android {
  namespace = "com.huimaotech.invoicevault"; compileSdk = 34; buildToolsVersion = "35.0.0"
- defaultConfig { applicationId = "com.huimaotech.invoicevault"; minSdk = 26; targetSdk = 37; versionCode = 17; versionName = "1.0.1"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
+ defaultConfig { applicationId = "com.huimaotech.invoicevault"; minSdk = 26; targetSdk = 37; versionCode = 18; versionName = "1.0.2"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
  signingConfigs {
   if (signingPropertiesFile != null) create("release") {
    storeFile = file(releaseSigning.getProperty("storeFile"))
