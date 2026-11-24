@@ -5,13 +5,13 @@
 
 # Gson serializes the backup manifest by field name.
 -keepattributes Signature,*Annotation*
--keep class com.minis.invoicevault.BackupManifest { <fields>; }
--keep class com.minis.invoicevault.WebDavConfig { <fields>; }
--keep class com.minis.invoicevault.RemoteBackup { <fields>; }
+-keep class com.huimaotech.invoicevault.BackupManifest { <fields>; }
+-keep class com.huimaotech.invoicevault.WebDavConfig { <fields>; }
+-keep class com.huimaotech.invoicevault.RemoteBackup { <fields>; }
 
 # XML parser entry points and bundled document-recognition engines.
--keep class com.minis.invoicevault.XmlInvoiceParser { *; }
--keep class com.minis.invoicevault.WebDavClient { *; }
+-keep class com.huimaotech.invoicevault.XmlInvoiceParser { *; }
+-keep class com.huimaotech.invoicevault.WebDavClient { *; }
 -dontwarn org.apache.fontbox.**
 -dontwarn org.apache.pdfbox.**
 -dontwarn com.gemalto.jp2.**

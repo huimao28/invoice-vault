@@ -1,6 +1,6 @@
 # 发票匣（InvoiceVault）
 
-本地优先的 Android 发票归档、识别、检索与备份工具。应用 ID：`com.minis.invoicevault`。
+本地优先的 Android 发票归档、识别、检索与备份工具。应用 ID：`com.huimaotech.invoicevault`。
 
 > [!IMPORTANT]
 > 发票通常包含姓名、公司、税号、账号等敏感信息。InvoiceVault 默认在设备本地处理和保存数据；只有用户主动配置 WebDAV、导出或分享时，数据才会离开应用私有目录。
@@ -41,7 +41,7 @@ printf 'sdk.dir=/path/to/android-sdk\n' > local.properties
 
 ### Release 签名
 
-签名材料不得提交。默认从 `~/.invoice-vault/signing.properties` 读取，也可用环境变量 `INVOICE_VAULT_SIGNING_PROPERTIES` 指向外部文件：
+签名材料不得提交。优先使用环境变量 `INVOICE_VAULT_SIGNING_PROPERTIES` 指向外部文件；Minis 构建环境也会读取 `/var/minis/shared/invoice-vault-signing/signing.properties`，其他环境回退到 `~/.invoice-vault/signing.properties`：
 
 ```properties
 storeFile=/absolute/path/to/release.keystore
@@ -78,6 +78,8 @@ keyPassword=CHANGE_ME
 ## 下载
 
 稳定版本请从 GitHub **Releases** 页面下载 `InvoiceVault-v1.0.0.apk`，并核对同页 `SHA256SUMS.txt`。不要从不可信第三方来源安装。
+
+v1.0.0 的正式应用 ID 为 `com.huimaotech.invoicevault`。应用 ID 从旧测试标识变更后，Android 会将其视为全新的应用，旧标识应用的数据与本版本不会自动共享或迁移；安装前请按需从旧应用导出备份。
 
 ## 参与贡献
 

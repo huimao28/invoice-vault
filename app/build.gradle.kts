@@ -4,13 +4,14 @@ plugins { id("com.android.application"); id("org.jetbrains.kotlin.android"); id(
 
 val signingPropertiesFile = sequenceOf(
     System.getenv("INVOICE_VAULT_SIGNING_PROPERTIES")?.let(::file),
+    file("/var/minis/shared/invoice-vault-signing/signing.properties"),
     File(System.getProperty("user.home"), ".invoice-vault/signing.properties")
 ).filterNotNull().firstOrNull { it.isFile }
 val releaseSigning = Properties().apply { signingPropertiesFile?.inputStream()?.use(::load) }
 
 android {
- namespace = "com.minis.invoicevault"; compileSdk = 34; buildToolsVersion = "35.0.0"
- defaultConfig { applicationId = "com.minis.invoicevault"; minSdk = 26; targetSdk = 37; versionCode = 16; versionName = "1.0.0"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
+ namespace = "com.huimaotech.invoicevault"; compileSdk = 34; buildToolsVersion = "35.0.0"
+ defaultConfig { applicationId = "com.huimaotech.invoicevault"; minSdk = 26; targetSdk = 37; versionCode = 16; versionName = "1.0.0"; testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner" }
  signingConfigs {
   if (signingPropertiesFile != null) create("release") {
    storeFile = file(releaseSigning.getProperty("storeFile"))
