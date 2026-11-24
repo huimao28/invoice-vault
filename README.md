@@ -1,4 +1,6 @@
-# 发票匣（InvoiceVault）
+# 发票匣
+
+<p align="center"><img src="docs/icon.png" width="160" alt="发票匣图标"></p>（InvoiceVault）
 
 本地优先的 Android 发票归档、识别、检索与备份工具。应用 ID：`com.huimaotech.invoicevault`。
 
